@@ -1,0 +1,6 @@
+sources:
+  - name: DeceasedConditionToSeason
+    database:  axial-feat-443616-a1   # (Optional, use if different from the profile project)
+    schema: ZoomcampProjectOne
+    tables:
+      - name: cattle_condition

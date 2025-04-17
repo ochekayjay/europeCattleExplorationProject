@@ -1,0 +1,29 @@
+[0m13:08:32.091904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255FB747910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255FB73E650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255FB73ED50>]}
+
+
+============================== 13:08:32.108262 | ad33c8f4-0e4f-49e8-869e-1276d02e09b7 ==============================
+[0m13:08:32.108262 [info ] [MainThread]: Running with dbt=1.9.3
+[0m13:08:32.111429 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\HP 1040 G6\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:08:51.200967 [debug] [MainThread]: Starter project path: C:\Users\HP 1040 G6\Desktop\ZoomCampProjectOne\DBT\dbt-venv\Lib\site-packages\dbt\include\starter_project
+[0m13:08:51.338942 [info ] [MainThread]: 
+Your new dbt project "Cattle_Condition_Exploration" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:08:51.352953 [info ] [MainThread]: Setting up your profile.
+[0m13:10:25.107645 [info ] [MainThread]: Profile Cattle_Condition_Exploration written to C:\Users\HP 1040 G6\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:10:25.116345 [debug] [MainThread]: Command `dbt init` succeeded at 13:10:25.116345 after 113.20 seconds
+[0m13:10:25.120394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F4C5B3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F4CA8490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000255F4F3E6D0>]}
+[0m13:10:25.120394 [debug] [MainThread]: Flushing usage events
+[0m13:10:26.778256 [debug] [MainThread]: An error was encountered while trying to flush usage events
