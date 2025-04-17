@@ -1,0 +1,47 @@
+id: 04_gcp_kv
+namespace: CattleExploration
+
+tasks:
+  - id: gcp_creds
+    type: io.kestra.plugin.core.kv.Set
+    namespace: CattleExploration
+    key: GCP_CREDS
+    kvType: JSON
+    value: |
+      {
+        "type": "service_account",
+        "project_id": "axial-****",
+        "private_key_id": "***a41***********61***88",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMI**************SjAgEAAoIBAQC2QgzuZH9pzU1Y\nmU78fOuT*******UAk45l1DHmh6VU15\nEa74bPKo**********QtIOzMFeR3w1MhAlQ5s3U=\n-----END PRIVATE KEY-----\n",
+        "client_email": "managekestraservices001@axial-****.iam.gserviceaccount.com",
+        "client_id": "345****92047905",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/managekestraservices001%40axial-****.iam.gserviceaccount.com",
+        "universe_domain": "googleapis.com"
+      }
+
+  - id: gcp_project_id
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_PROJECT_ID
+    kvType: STRING
+    value: axial-**** # TODO replace with your project id
+
+  - id: gcp_location
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_LOCATION
+    kvType: STRING
+    value: europe-west2 # TODO replace with befetting gcp location
+
+  - id: gcp_bucket_name
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_BUCKET_NAME
+    kvType: STRING
+    value: bucket-*******616-a1 # TODO make sure it's globally unique!
+
+  - id: gcp_dataset
+    type: io.kestra.plugin.core.kv.Set
+    key: GCP_DATASET
+    kvType: STRING
+    value: new_dset*******s
