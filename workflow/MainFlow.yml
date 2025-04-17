@@ -44,4 +44,4 @@ tasks:
     type: io.kestra.plugin.core.kv.Set
     key: GCP_DATASET
     kvType: STRING
-    value: new_dataset*********s
+    value: new_dset*********s
