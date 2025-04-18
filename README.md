@@ -24,7 +24,7 @@ Create SQL queries and dashboards to generate insights on looker studio.
 ├── README.md # Project documentation
 📊 Dataset
 
-Source: Cattle Condition research in the UK dataset from: here
+Source: Cattle Condition research in the UK dataset from: here (https://www.data.gov.uk/dataset/d29ae5a8-8971-4af0-9935-91f87a809e5a/cattle-conditions)
 Format: CSV
 Fields: Species, Inspection Type, Condition, Throughput, PercentageThroughput etc.
 Frequency: Static dataset (one-time load) 📊 Dataset Details
