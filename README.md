@@ -24,7 +24,7 @@ Create SQL queries and dashboards to generate insights on looker studio.
 ├── README.md # Project documentation
 📊 Dataset
 
-Source: Flight Price Prediction dataset from: here
+Source: Cattle Condition research in the UK dataset from: here
 Format: CSV
 Fields: Species, Inspection Type, Condition, Throughput, PercentageThroughput etc.
 Frequency: Static dataset (one-time load) 📊 Dataset Details
@@ -34,12 +34,13 @@ Time Period: Data collected for 3 years at every 3months interval (Apr 2018 - De
 Total Records: 5,115 individual records.
 
 🔬 Research Questions
+(all of these research questions are expressed in the DBT model folder)
+- How is the monthly count of conditions per region and species, including condition rate as a percentage of throughput.
+- Identify the most frequent health/welfare conditions per country and species across all months. Useful for policy focus and inspections.
+- Monitor how active throughput plants are in each country over time and their average processing load
 
-Does price vary with Airlines?
-How is the price affected when tickets are bought just 1 or 2 days before departure?
-Does ticket price change based on departure and arrival times?
-How does the price change with different Source and Destination cities?
-How does ticket price vary between Economy and Business class?
+
+
 ⚙️ Technologies Used
 
 Kestra (task automation tool with a cron job option)
