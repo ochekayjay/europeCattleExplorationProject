@@ -1,39 +1,38 @@
 # europeCattleExplorationProject
 
-Flight Price Prediction
-Batch Processing Project
-Data Ingestion with dlt
+This project Includes data exploration in the UK for cattle grooming covering important features in the sector like the plants, throughputs, percentage throughput, illness, mortality rate etc.
+
 📌 Project Overview
 
-This project focuses on building a batch data pipeline for analyzing a flight booking dataset. The goal is to extract, transform, and load (ETL) the dataset using dlt, DuckDB, pandas, and BigQuery for further analysis in Looker Studio. The project follows best practices learned in the DataTalksClub Data Engineering Zoomcamp 2025.
+This project highlightes on building a batch data pipeline for analyzing cattle reposited dataset in the UK. The goal is to extract,load  and transform(ELT) the dataset using Kestra, postgreSQL, docker, and BigQuery for further analysis in Looker Studio. The project explores various core aspects surrounding the nurture and nature of cattle breeding and gives important insights to government agencies on how to manage disease outbreak, cattle breeders on what type of cattle is commercially viable per region and the quality of plants per region for technical investors, it follows best practices learned in the DataTalksClub Data Engineering Zoomcamp 2025.
 
 🔍 Objectives
 
-Automate batch data ingestion using dlt.
-Store raw data in DuckDB.
-Perform data transformations using pandas.
+Automate batch data ingestion using python script in kestra.
+Store raw data in Google cloud Storage.
+Normalize and Partition the data by date in bigQuery data warehouse.
 Load processed data into BigQuery for analysis.
-Create SQL queries and dashboards to generate insights.
+Create dbt models to further draw insights in automated fashion from the persisted dataset in bigquery.
+Create SQL queries and dashboards to generate insights on looker studio.
 📂 Repository Structure
 
-├── code/
-1. dlt ingestion scripts to extract, transform, and load in a data lake(duckdb)
-2. pandas data cleaning and preparation scripts for analyzing
-3. dlt scripts to load cleaned data from the data lake to a data warehouse(BigQuery)
-├── data/ # sample of datasets
-├── dashboards/ # Dashboards & reports
+├── workflow/
+1. mainflow.yml => ingestion scripts to extract, data normalization, and load in google cloud storage and later into bigquery.
+2. projectOnboard.yml => Stores google cloud storage and bigquery credentials into temporary memory in kestra environment.
+├── DBT/ # includes data transformation sscripts synced with the data warehouse for automated transformation.
+├── images/ # Dashboards & reports
 ├── README.md # Project documentation
 📊 Dataset
 
 Source: Flight Price Prediction dataset from: here
 Format: CSV
-Fields: Airline, Date, Time, Price, Class (Economy/Business), Stops, etc.
+Fields: Species, Inspection Type, Condition, Throughput, PercentageThroughput etc.
 Frequency: Static dataset (one-time load) 📊 Dataset Details
-Source: Ease My Trip website
-Data Collection: Web scraping using Octoparse
-Time Period: Data collected over 50 days (Feb 11 - Mar 31, 2022)
-Total Records: 300,261 flight booking options
-Categories: Economy and Business class tickets
+Source: data.gov.uk
+Data Collection: Downloaded in loops from the api ochestrated by a cron job
+Time Period: Data collected for 3 years at every 3months interval (Apr 2018 - Dec 2020)
+Total Records: 5,115 individual records.
+
 🔬 Research Questions
 
 Does price vary with Airlines?
@@ -43,10 +42,10 @@ How does the price change with different Source and Destination cities?
 How does ticket price vary between Economy and Business class?
 ⚙️ Technologies Used
 
-dlt (data ingestion from Kaggle to DuckDB)
-DuckDB (temporary storage & processing)
-pandas (data transformation & cleaning)
+Kestra (task automation tool with a cron job option)
+Google Cloud Storage (raw data storage)
 BigQuery (data warehousing & querying)
+DBT ( streamline and automate the data transformation process within a data warehouse)
 Looker Studio (visualization & reporting)
 🔄 Batch Processing Pipeline
 
@@ -58,7 +57,7 @@ Analyze & Visualize: SQL queries + Looker Studio dashboards for insights.
 📊 Data Warehouse Optimization
 
 Partitioning: Based on flight date to improve query performance.
-Clustering: By Airline & Class to optimize analytics.
+
 About
 Batch Processing Project
 
